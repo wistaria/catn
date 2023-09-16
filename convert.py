@@ -11,7 +11,7 @@ def convert_to_incidence_list(name):
 
     tensors = []
     for t, s in zip(vectors, sizes):
-        t = np.reshape(t.view(np.complex), s, order='F')
+        t = np.reshape(t.view(np.complex128), s, order='F')
         tensors.append(t)
     return tensors, labels
 

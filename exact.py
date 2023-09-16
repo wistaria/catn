@@ -45,7 +45,7 @@ class exact:
             while flag:
                 temp = []
                 flag = False
-                for i in list(G1.node):
+                for i in list(G1.nodes):
                     if G1.degree[i] <= 1:
                         temp.append(i)
                         flag = True
@@ -74,7 +74,7 @@ class exact:
             tree = self.G.subgraph(ccs[l]).copy()
             while tree.number_of_nodes():
                 temp = []
-                for j in list(tree.node):
+                for j in list(tree.nodes):
                     if tree.number_of_nodes() == 1 or tree.number_of_nodes() == 2:
                         temp.append(j)
                         break
